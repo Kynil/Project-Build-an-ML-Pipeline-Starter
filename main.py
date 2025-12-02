@@ -125,7 +125,7 @@ def go(config: DictConfig):
             ##################
             _ = mlflow.run(
                 f"{config['main']['components_repository']}/test_regression_model",
-                entry_point=:"main",
+                entry_point="main",
                 env_manager="conda",
                 parameters={
                     "mlflow_model": "random_forest_export:prod",
